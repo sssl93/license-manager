@@ -53,6 +53,6 @@ class LoggerHandler(object):
         else:
             handler = self.syslog_handler()
         self.set_log_format(handler)
-        self.log.addHandler(handler)
+        self.log.handlers = [handler, logging.StreamHandler()]
         self.log.setLevel(self.log_level)
         return self.log

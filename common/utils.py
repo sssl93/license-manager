@@ -4,7 +4,6 @@ import os
 import shutil
 import uuid
 import datetime
-import types
 
 
 def find_config_file():
@@ -56,7 +55,7 @@ def get_metric_unit(metric):
 
 
 def get_metric_args(args, index=0):
-    if args and isinstance(args, (str, unicode)):
+    if args and isinstance(args, (str,)):
         return args
     if isinstance(args, (list, tuple)) and len(args) > index:
         return args[index]

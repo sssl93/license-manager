@@ -1,2 +1,2 @@
-log_file = '/var/log/mmp.log'
+log_file = '/var/log/license-mgr.log'
 log_level = 'debug'
